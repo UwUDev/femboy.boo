@@ -1,0 +1,29 @@
+:root {
+    background:
+            linear-gradient(135deg, #a321c5, #3d1861),
+            url(https://grainy-gradients.vercel.app/noise.svg);
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.cards {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-uwu {
+    margin: 10px;
+    background: #ffffff;
+    width: 30vh;
+    height: 30vh;
+}
+
+.card-uwu:hover{
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
