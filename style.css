@@ -1,13 +1,58 @@
+@font-face {
+    font-family: 'Recoleta-Black';
+    src: local('Recoleta Black'), local('Recoleta-Black'),
+    url('/fonts/Recoleta-Black.woff2') format('woff2'),
+    url('/fonts/Recoleta-Black.woff') format('woff'),
+    url('/fonts/Recoleta-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: local('Recoleta Medium'), local('Recoleta-Medium'),
+    url('/fonts/Recoleta-Medium.woff2') format('woff2'),
+    url('/fonts/Recoleta-Medium.woff') format('woff'),
+    url('/fonts/Recoleta-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 :root {
-    background:
-            linear-gradient(135deg, #a321c5, #3d1861),
-            url(https://grainy-gradients.vercel.app/noise.svg);
     margin: 0;
+    --yellow: #de055f;
+    --red: #dc0bea;
+    --green: #901eed;
+    background:
+            linear-gradient(149deg, rgba(72,1,255,0.5) 0%, rgba(171,49,228,0.5) 100%),
+            url('noise.svg');
+    background-attachment: fixed;
+    font-family: "Recoleta", sans-serif;
+}
+
+h2 {
+    font-family: "Recoleta-Black", sans-serif;
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+body::before {
+    background: #8C8C8C;
+    filter: url(#noiseFilter);
 }
 
 html, body {
     height: 100%;
-    margin: 0;
+    gap: 3em;
+    margin: 0 10em;
 }
 
 .cards {
@@ -18,12 +63,130 @@ html, body {
 }
 
 .card-uwu {
+    border-radius: 20px;
     margin: 10px;
     background: #ffffff;
     width: 30vh;
     height: 30vh;
+    align-items: center;
+    text-align: center;
 }
 
 .card-uwu:hover{
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    box-shadow: 0 4px 80px 10px rgba(27, 26, 42, 0.25);
+}
+
+/* Blobs */
+.blob-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    right: 5em;
+}
+
+
+.blob {
+    border-radius: 100px;
+    filter: blur(40px);
+}
+
+.yellow {
+    background-color: var(--yellow);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 200px;
+    width: 200px;
+
+    animation: blob1 8s infinite ease;
+}
+
+.green {
+    background-color: var(--green);
+    position: absolute;
+    top: 80px;
+    right: -20px;
+    height: 200px;
+    width: 250px;
+
+    animation: blob2 8s infinite ease;
+}
+
+.red {
+    background-color: var(--red);
+    position: absolute;
+    right: 0;
+    top: 300px;
+    height: 250px;
+    width: 200px;
+
+    animation: blob3 8s infinite linear;
+}
+
+@keyframes blob1 {
+    0% {top: 200px; left: 100px; transform: scale(1);}
+    30% {top: 300px; left: 150px; transform: scale(1.2);}
+    60% {top: 100px; left: 200px; transform: scale(1.3);}
+    100% {top: 200px; left: 100px; transform: scale(1);}
+}
+
+@keyframes blob2 {
+    0% {top: 80px; right: -20px; transform: scale(1.2);}
+    30% {top: 300px; right: -20px;transform: scale(1);}
+    60% {top: 200px; right: 100px;transform: scale(1);}
+    100% {top: 80px; right: -20px; transform: scale(1.2);}
+}
+
+@keyframes blob3 {
+    0% {top: 250px; right: 0px; transform: scale(1);}
+    30% {top: 150px; right: 150px;transform: scale(1.4);}
+    60% {top: 250px; right: 100px;transform: scale(1);}
+    100% {top: 250px; right: 0px; transform: scale(1);}
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3em;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 3em;
+    background:
+            linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
+            linear-gradient(to right, #151515 1px, transparent 1px) 0 100%,
+            linear-gradient(to left, #151515 1px, transparent 1px) 100% 0,
+            linear-gradient(to left, #151515 1px, transparent 1px) 100% 100%,
+            linear-gradient(to bottom, #151515 1px, transparent 1px) 0 0,
+            linear-gradient(to bottom, #151515 1px, transparent 1px) 100% 0,
+            linear-gradient(to top, #151515 1px, transparent 1px) 0 100%,
+            linear-gradient(to top, #151515 1px, transparent 1px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+
+}
+
+.hero-title {
+    margin-top: 10vh;
+    font-size: 5em;
 }
