@@ -50,6 +50,8 @@ body::before {
 }
 
 html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     height: 100%;
     gap: 3em;
     margin: 0 10em;
@@ -189,4 +191,8 @@ html, body {
 .hero-title {
     margin-top: 10vh;
     font-size: 5em;
+}
+
+:root::-webkit-scrollbar {
+    display: none;
 }
