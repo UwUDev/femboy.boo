@@ -20,17 +20,16 @@
 
 :root {
     margin: 0;
-    --yellow: #de055f;
-    --red: #dc0bea;
-    --green: #901eed;
-    background:
-            linear-gradient(149deg, rgba(72,1,255,0.5) 0%, rgba(171,49,228,0.5) 100%),
-            url('noise.svg');
+    --red: #de055f;
+    --pink: #dc0bea;
+    --purple: #901eed;
+    background: linear-gradient(149deg, rgba(72, 1, 255, 0.5) 0%, rgba(171, 49, 228, 0.5) 100%),
+    url('noise.svg');
     background-attachment: fixed;
     font-family: "Recoleta", sans-serif;
 }
 
-h2 {
+.title {
     font-family: "Recoleta-Black", sans-serif;
     font-size: 3em;
 }
@@ -50,8 +49,8 @@ body::before {
 }
 
 html, body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
     height: 100%;
     gap: 3em;
     margin: 0 10em;
@@ -73,7 +72,7 @@ html, body {
     text-align: center;
 }
 
-.card-uwu:hover{
+.card-uwu:hover {
     box-shadow: 0 4px 80px 10px rgba(27, 26, 42, 0.25);
 }
 
@@ -96,8 +95,8 @@ html, body {
     filter: blur(40px);
 }
 
-.yellow {
-    background-color: var(--yellow);
+.red {
+    background-color: var(--red);
     position: absolute;
     top: 200px;
     left: 100px;
@@ -107,19 +106,8 @@ html, body {
     animation: blob1 8s infinite ease;
 }
 
-.green {
-    background-color: var(--green);
-    position: absolute;
-    top: 80px;
-    right: -20px;
-    height: 200px;
-    width: 250px;
-
-    animation: blob2 8s infinite ease;
-}
-
-.red {
-    background-color: var(--red);
+.pink {
+    background-color: var(--pink);
     position: absolute;
     right: 0;
     top: 300px;
@@ -129,25 +117,84 @@ html, body {
     animation: blob3 8s infinite linear;
 }
 
+.purple {
+    background-color: var(--purple);
+    position: absolute;
+    top: 80px;
+    right: -20px;
+    height: 200px;
+    width: 250px;
+
+    animation: blob2 8s infinite ease;
+}
+
 @keyframes blob1 {
-    0% {top: 200px; left: 100px; transform: scale(1);}
-    30% {top: 300px; left: 150px; transform: scale(1.2);}
-    60% {top: 100px; left: 200px; transform: scale(1.3);}
-    100% {top: 200px; left: 100px; transform: scale(1);}
+    0% {
+        top: 200px;
+        left: 100px;
+        transform: scale(1);
+    }
+    30% {
+        top: 300px;
+        left: 150px;
+        transform: scale(1.2);
+    }
+    60% {
+        top: 100px;
+        left: 200px;
+        transform: scale(1.3);
+    }
+    100% {
+        top: 200px;
+        left: 100px;
+        transform: scale(1);
+    }
 }
 
 @keyframes blob2 {
-    0% {top: 80px; right: -20px; transform: scale(1.2);}
-    30% {top: 300px; right: -20px;transform: scale(1);}
-    60% {top: 200px; right: 100px;transform: scale(1);}
-    100% {top: 80px; right: -20px; transform: scale(1.2);}
+    0% {
+        top: 80px;
+        right: -20px;
+        transform: scale(1.2);
+    }
+    30% {
+        top: 300px;
+        right: -20px;
+        transform: scale(1);
+    }
+    60% {
+        top: 200px;
+        right: 100px;
+        transform: scale(1);
+    }
+    100% {
+        top: 80px;
+        right: -20px;
+        transform: scale(1.2);
+    }
 }
 
 @keyframes blob3 {
-    0% {top: 250px; right: 0px; transform: scale(1);}
-    30% {top: 150px; right: 150px;transform: scale(1.4);}
-    60% {top: 250px; right: 100px;transform: scale(1);}
-    100% {top: 250px; right: 0px; transform: scale(1);}
+    0% {
+        top: 250px;
+        right: 0px;
+        transform: scale(1);
+    }
+    30% {
+        top: 150px;
+        right: 150px;
+        transform: scale(1.4);
+    }
+    60% {
+        top: 250px;
+        right: 100px;
+        transform: scale(1);
+    }
+    100% {
+        top: 250px;
+        right: 0px;
+        transform: scale(1);
+    }
 }
 
 .nav {
@@ -156,6 +203,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 10vh;
 }
 
 .menu {
@@ -173,15 +221,14 @@ html, body {
     align-items: center;
 
     gap: 3em;
-    background:
-            linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
-            linear-gradient(to right, #151515 1px, transparent 1px) 0 100%,
-            linear-gradient(to left, #151515 1px, transparent 1px) 100% 0,
-            linear-gradient(to left, #151515 1px, transparent 1px) 100% 100%,
-            linear-gradient(to bottom, #151515 1px, transparent 1px) 0 0,
-            linear-gradient(to bottom, #151515 1px, transparent 1px) 100% 0,
-            linear-gradient(to top, #151515 1px, transparent 1px) 0 100%,
-            linear-gradient(to top, #151515 1px, transparent 1px) 100% 100%;
+    background: linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
+    linear-gradient(to right, #151515 1px, transparent 1px) 0 100%,
+    linear-gradient(to left, #151515 1px, transparent 1px) 100% 0,
+    linear-gradient(to left, #151515 1px, transparent 1px) 100% 100%,
+    linear-gradient(to bottom, #151515 1px, transparent 1px) 0 0,
+    linear-gradient(to bottom, #151515 1px, transparent 1px) 100% 0,
+    linear-gradient(to top, #151515 1px, transparent 1px) 0 100%,
+    linear-gradient(to top, #151515 1px, transparent 1px) 100% 100%;
     background-repeat: no-repeat;
     background-size: 20px 20px;
 
@@ -194,4 +241,20 @@ html, body {
 
 :root::-webkit-scrollbar {
     display: none;
+}
+
+p {
+    max-width: 45vw;
+}
+
+.link {
+    font-family: "Recoleta-Black", sans-serif;
+    text-decoration: underline;
+    color: #910c75;
+}
+
+.category {
+    font-family: "Recoleta-Black", sans-serif;
+    font-size: 2em;
+    margin-top: 5vh;
 }
