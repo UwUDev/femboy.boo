@@ -2,23 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cuties</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon"
+          type="image/png"
+          href="https://cdn.upload.systems/uploads/x9ObtU5U.png">
+
+    <meta content="E" property="og:title"/>
+    <meta content="Epic embed" property="og:description"/>
+    <meta content="https://femboy.boo" property="og:url"/>
+    <meta content="https://cdn.upload.systems/uploads/QYCg7MIu.jpg" property="og:image"/>
+    <meta content="#B018EC" data-react-helmet="true" name="theme-color"/>
+    <meta content="Femboy.Boo" property="og:site_name">
 </head>
 <body>
+<div class="nav">
+    <a class="title" href="/">Femboy.boo</a>
+    <div class="menu">
+        <a href="about">About Me</a>
+        <a href="https://github.com/UwUDev/femboy.boo">Source Code</a>
+    </div>
+</div>
 
-<center>
-    <h1>Copilot lied sorry</h1>
-    <h1>:(((((((</h1>
-</center>
+<h1 class="hero-title">Cool people</h1>
+
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // wait 2 seconds before redirecting
-        setTimeout(function () {
-            // go back to the home page
-            window.location.href = "index.html";
-        }, 2000);
-    });
+    let cool = [
+        {
+            "url": "https://octozu.xyz/",
+            "short": "octozu.xyz",
+            "name": "Octozu",
+            "image": "https://avatars.githubusercontent.com/u/78366921",
+            "description": "❤",
+            "alt": "octo"
+        },
+        {
+            "url": "https://bwbl.me/",
+            "short": "bwbl.me",
+            "name": "Bwbl",
+            "image": "https://avatars.githubusercontent.com/u/47088279",
+            "description": "Professional retard",
+            "alt": "bwbl"
+        },
+        {
+            "url": "https://tarkacore.dev/",
+            "short": "tarkacore.dev",
+            "name": "Tarkacore",
+            "image": "https://avatars.githubusercontent.com/u/58187109",
+            "description": "Vive la DHF",
+            "alt": "tarka"
+        },
+        {
+            "url": "https://ailcope.dev",
+            "short": "ailcope.dev",
+            "name": "Ailcope",
+            "image": "https://avatars.githubusercontent.com/u/54411234",
+            "description": "Professional retard too",
+            "alt": "ailcope"
+        },
+        {
+            "url": "https://lambdagg.xyz/",
+            "short": "lambdagg.xyz",
+            "name": "lambdagg",
+            "image": "https://avatars.githubusercontent.com/u/62030539",
+            "description": "pd.",
+            "alt": "gropd"
+        },
+        {
+            "url": "https://github.com/Uruknara",
+            "short": "github.com/Uruknara",
+            "name": "Gauvino",
+            "image": "https://avatars.githubusercontent.com/u/68083474",
+            "description": "Proxmox proxmox proxmox proxmox proxmox",
+            "alt": "uruk"
+        },
+        {
+            "url": "https://woomy.be/",
+            "short": "woomy.be",
+            "name": "Woomy",
+            "image": "https://avatars.githubusercontent.com/u/57042741",
+            "description": "Mediatek > Woomy",
+            "alt": "woomymymymy"
+        },
+        {
+            "url": "https://github.com/Showdown76py",
+            "short": "github.com/Showdown76py",
+            "name": "Show'",
+            "image": "https://avatars.githubusercontent.com/u/66854264",
+            "description": "Do NOT install python",
+            "alt": "show"
+        },
+        {
+            "url": "https://github.com/Tatsuwuki",
+            "short": "github.com/Tatsuwuki",
+            "name": "Tatsu",
+            "image": "https://avatars.githubusercontent.com/u/117034496",
+            "description": "Block game dev",
+            "alt": "s"
+        },
+        {
+            "url": "https://github.com/barbinou",
+            "short": "github.com/barbinou",
+            "name": "Barbinou",
+            "image": "https://avatars.githubusercontent.com/u/103124024",
+            "description": "Pro-dev css",
+            "alt": "barbinou"
+        },
+        {
+            "url": "ttps://github.com/xylogix",
+            "short": "github.com/xylogix",
+            "name": "Xylogix",
+            "image": "https://avatars.githubusercontent.com/u/103117759?",
+            "description": "Pro-dev rien du tout mais pg",
+            "alt": "xylogix"
+        },
+        {
+            "url": "https://www.twitch.tv/ribie",
+            "short": "twitch.tv/ribie",
+            "name": "Popi",
+            "image": "https://cdn.discordapp.com/avatars/518900307334397984/7510012b418d71983d0726d8cdcad1b1.webp?size=4096",
+            "description": "Pro-rageuse",
+            "alt": "ribie"
+        },
+    ]
+
+    for (let i = cool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * i)
+        const temp = cool[i]
+        cool[i] = cool[j]
+        cool[j] = temp
+    }
+
+    const cool2d = []
+    for (let i = 0; i < cool.length; i += 2) {
+        cool2d.push(cool.slice(i, i + 2))
+    }
+
+    for (let i = 0; i < cool2d.length; i++) {
+        let cards = document.createElement("div")
+        cards.className = "cards"
+        if (i === 0) {
+            cards.style.marginTop = "0"
+        }
+
+        for (let j = 0; j < cool2d[i].length; j++) {
+            let card = document.createElement("div")
+            card.className = "card-uwu"
+            card.setAttribute("data-tilt", "")
+            card.setAttribute("data-tilt-speed", "1200")
+            card.setAttribute("data-tilt-easing", "cubic-bezier(.03,.98,.52,.99)")
+            card.setAttribute("onclick", `window.location.href='${cool2d[i][j].url}'`)
+
+            let title = document.createElement("h1")
+            title.className = "card-title"
+            title.innerText = cool2d[i][j].name
+
+            let image = document.createElement("img")
+            image.className = "card-image"
+            image.src = cool2d[i][j].image
+            image.alt = cool2d[i][j].alt
+
+            let description = document.createElement("p")
+            description.innerText = cool2d[i][j].description
+
+            let link = document.createElement("p")
+            let linka = document.createElement("a")
+            linka.className = "card-link"
+            linka.href = cool2d[i][j].url
+            linka.innerText = cool2d[i][j].short
+            link.appendChild(linka)
+
+            card.appendChild(title)
+            card.appendChild(image)
+            card.appendChild(description)
+            card.appendChild(link)
+
+            cards.appendChild(card)
+        }
+
+        document.body.appendChild(cards)
+    }
 </script>
+
+<script src="js/tilt.min.js"></script>
+
 </body>
 </html>
