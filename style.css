@@ -199,7 +199,7 @@ a.card-link {
 @keyframes blob3 {
     0% {
         top: 250px;
-        right: 0px;
+        right: 0;
         transform: scale(1);
     }
     30% {
@@ -214,7 +214,7 @@ a.card-link {
     }
     100% {
         top: 250px;
-        right: 0px;
+        right: 0;
         transform: scale(1);
     }
 }
