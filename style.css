@@ -62,6 +62,7 @@ html, body {
 }
 
 .card-uwu {
+    overflow: auto;
     margin: 10px;
     background: #ffffff;
     width: 25vw;
@@ -76,6 +77,31 @@ html, body {
 
 .card-uwu:hover {
     box-shadow: 0 4px 80px 10px rgba(27, 26, 42, 0.25);
+}
+
+/* Custom Scrollbar styles */
+.card-uwu::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+.card-uwu::-webkit-scrollbar-track {
+    background: transparent; /* The track of the scrollbar */
+}
+
+.card-uwu::-webkit-scrollbar-thumb {
+    background: #901eed; /* The draggable part of the scrollbar */
+    border-radius: 100px;
+}
+
+.card-uwu::-webkit-scrollbar-thumb:hover {
+    background: #5d129a; /* Color when you hover over the draggable part of the scrollbar */
+}
+
+
+/* For Firefox */
+.card-uwu {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: #901eed transparent; /* The draggable part of the scrollbar and the track */
 }
 
 .card-title {
