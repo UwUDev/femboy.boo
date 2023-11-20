@@ -301,6 +301,21 @@ p {
     color: #910c75;
 }
 
+.button {
+    font-family: "Recoleta-Black", sans-serif;
+    font-size: 1.5em;
+    border-radius: 13px;
+    border: none;
+    padding: 1em 2em;
+    background: linear-gradient(149deg, rgba(21, 151, 232, 0.8) 0%, rgba(231, 24, 236, 0.8) 100%), url('noise.svg');
+    background-attachment: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 1em;
+    width: 5vw;
+}
+
 .category {
     font-family: "Recoleta-Black", sans-serif;
     font-size: 2em;
