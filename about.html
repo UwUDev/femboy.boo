@@ -17,10 +17,16 @@
     <meta content="Femboy.Boo" property="og:site_name">
 
     <style>
+        /*custom css only for about page*/
         p {
             font-size: 1.2em;
         }
+        img.emoji {
+            height: 1.1em;
+            width: 1.1em;
+        }
     </style>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="nav">
@@ -35,7 +41,7 @@
     <div>
         <h1 class="hero-title">About me.</h1>
 
-        <p>Hey there! ☺️</p>
+        <p>Hey there! 😁</p>
         <p>I'm UwUDev, a 21-year-old student from France who loves reverse engineering and exploits ✨</p>
 
         <h1 class="category">Things I know</h1>
@@ -94,5 +100,6 @@
 </div>
 
 <script src="js/tilt.min.js"></script>
+<script>twemoji.parse(document.body);</script>
 </body>
 </html>
