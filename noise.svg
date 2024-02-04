@@ -3,6 +3,11 @@
         xmlns:xlink='http://www.w3.org/1999/xlink'
         width='300' height='300'>
 
+    <!--
+    Mon svg de qualite superieure
+    Bordel que j'aime cet effet
+     -->
+
     <filter id='n' x='0' y='0'>
         <feTurbulence
                 type='fractalNoise'

@@ -321,3 +321,8 @@ p {
     font-size: 2em;
     margin-top: 5vh;
 }
+
+img.emoji {
+    /*c'est de la merde*/
+    vertical-align: -10%;
+}
