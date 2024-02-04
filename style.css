@@ -70,6 +70,7 @@ html, body {
     align-items: center;
     text-align: center;
     border-radius: 1.4vw;
+    padding: 20px;
 
     background: linear-gradient(149deg, rgba(1, 158, 255, 0.5) 0%, rgba(222, 49, 228, 0.5) 100%), url('noise.svg');
     background-attachment: fixed;
